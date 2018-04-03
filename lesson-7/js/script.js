@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // RequestAnimationFrame 
 // Нужен для группировки всех перерисовок в одну и для запуска их всех вместе.
 
@@ -10,7 +12,7 @@ function animate( options ) {
     	let timeFraction = ( time - start ) / options.duration;
     	if ( timeFraction > 1 ) timeFraction = 1;
     	// Получаем текущее состояние анимации
-    	let progress = options.timing(timeFraction)
+    	let progress = options.timing(timeFraction);
     	// Рисуем
     	options.draw( progress );
     	if ( timeFraction < 1 ) {
