@@ -8,10 +8,10 @@
 </head>
 
 <body>
-
-
-	<progress id="elem"></progress>
-
+	<button id="elem">Активировать</button>
+	<hr>
+	<progress id="elem1"></progress>
+	
 <script>
 	elem.onclick = function() {
 		// Передаем параметры в функцию 
@@ -23,7 +23,7 @@
 			},
 			// Рисуем полоску прогресса
 			draw: function(progress) {
-				elem.style.width = progress * 100 + '%';
+				elem1.style.width = progress * 100 + '%';
 			}
 		});
 	};
