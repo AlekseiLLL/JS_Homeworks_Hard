@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #000000;
+  color: rgba(162, 222, 251, 0.9);
+  overflow-x: hidden;
+}
+button {
+  text-transform: uppercase;
+}
+button:focus {
+  outline: none;
+}
+.open-btn {
+  display: block;
+  max-width: 30rem;
+  width: 95%;
+  background-color: #fcf100;
+  color: #22252a;
+  padding: 2rem;
+  margin: 3rem auto;
+  font-size: 1.8rem;
+  text-align: center;
+  border: none;
+}
+.open-btn:hover {
+  box-shadow: 1px 1px #c9c000, 2px 2px #c9c000, 3px 3px #c9c000, 4px 4px #c9c000, 5px 5px #c9c000, 6px 6px #c9c000, 7px 7px #c9c000;
+  -webkit-transform: translateX(-7px);
+  -moz-transform: translateX(-7px);
+  transform: translateX(-7px);
+  transition: all .5s ease;
+}
+.open-btn:focus {
+  color: #22252a;
+}
+.main {
+  display: block;
+  margin-top: 3rem;
+}
+.main-info {
+  color: rgba(211, 239, 253, 0.9);
+  display: block;
+  padding: 2rem;
+}
+.main-info div {
+  background-color: #1a1a1a;
+  border: 1px solid #c9c000;
+  margin-left: .5rem;
+  margin-top: .5rem;
+  min-height: 4rem;
+  padding: 1rem;
+  width: 45%;
+  text-align: center;
+}
+.main-info div:nth-child(2n-1) {
+  display: inline-block;
+  min-height: 4.2rem;
+  vertical-align: top;
+}
+.main-info .header {
+  width: 91%;
+}
+.main-info .isopen-value,
+.main-info .discount-value {
+  background-color: red;
+  border: none;
+}
+.main-functions {
+  color: rgba(162, 222, 251, 0.9);
+  display: block;
+  padding: 2rem;
+}
+.main-functions div {
+  display: block;
+  float: left;
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+  margin-left: .5rem;
+  margin-top: .5rem;
+  text-align: center;
+  width: 100%;
+}
+.main-functions div:nth-child(9) {
+  max-width: 45%;
+}
+.main-functions div:nth-child(10) {
+  max-width: 45%;
+}
+.main-functions input {
+  background-color: #1a1a1a;
+  border-radius: 0px;
+  border: 1px solid #c9c000;
+  color: #c9c000;
+  display: block;
+  float: left;
+  margin-left: .5rem;
+  margin-top: .5rem;
+  max-width: 45%;
+}
+.main-functions input:nth-child(8) {
+  max-width: 91%;
+}
+.main-functions input:nth-child(15),
+.main-functions input:nth-child(16),
+.main-functions input:nth-child(17) {
+  max-width: 91%;
+}
+.main-functions button {
+  display: block;
+  float: left;
+  background-color: #fcf100;
+  border-radius: 0px;
+  color: #000;
+  margin-top: 1rem;
+  margin-left: 20rem;
+}
+.main-functions button:nth-child(13) {
+  margin-left: 19.5rem;
+}
+.main-functions button:nth-child(18) {
+  margin-left: 21.5rem;
+}

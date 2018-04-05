@@ -1,0 +1,160 @@
+// Вводим переменные цветов
+
+@bgc: rgba(0,0,0,1);
+@lightCyan: rgba(24, 217, 234,.8);
+@btnYellow: rgba(252,241,0,1);
+@btnText: rgba(34,37,42,1);
+@btnColor: rgba(255,255,255,.9);
+@divHeader: rgba(162,222,251,.9);
+
+
+// Оформляем базовые стили для всей страницы
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background-color: @bgc;
+	color: @divHeader;
+	overflow-x: hidden;
+}
+
+button {
+	text-transform: uppercase;
+	&:focus {
+		outline: none;
+	}
+}
+
+
+
+
+// Кнопка "Открыть магазин"
+
+.open-btn {
+	display: block;
+	max-width: 30rem;
+	width: 95%;
+	background-color: @btnYellow;
+	color: @btnText;
+	padding: 2rem;
+	margin: 3rem auto;
+	font-size: 1.8rem;
+	text-align: center;
+	border: none;
+	
+	&:hover {
+		box-shadow:
+		1px 1px darken(@btnYellow, 10%),
+		2px 2px darken(@btnYellow, 10%),
+		3px 3px darken(@btnYellow, 10%),
+		4px 4px darken(@btnYellow, 10%),
+		5px 5px darken(@btnYellow, 10%),
+		6px 6px darken(@btnYellow, 10%),
+		7px 7px darken(@btnYellow, 10%);
+		-webkit-transform: translateX(-7px);
+		-moz-transform: translateX(-7px);
+		transform: translateX(-7px);
+		transition: all .5s ease;
+	}
+	&:focus {
+		color: @btnText;
+	}
+
+}
+
+.main {
+	display: block;
+	margin-top: 3rem;
+	&-info {
+		color: lighten(@divHeader, 10%);
+		display: block;
+		padding: 2rem;
+		div {
+			background-color: lighten(@bgc, 10%);
+			border: 1px solid darken(@btnYellow, 10%);
+			margin-left: .5rem;
+			margin-top: .5rem;
+			min-height: 4rem;
+			padding: 1rem;
+			width: 45%;
+			text-align: center;
+			
+		}
+		div:nth-child(2n-1) {
+			display: inline-block;
+			min-height: 4.2rem;
+			vertical-align: top;
+		}
+		.header {
+			width: 91%;
+
+		}
+		.isopen-value,
+		.discount-value {
+			background-color: red;
+			border: none;
+		}
+	}
+	&-functions {
+		color: @divHeader;
+		display: block;
+		padding: 2rem;
+		div {
+			display: block;
+			float: left;
+			font-size: 1.6rem;
+			margin-bottom: .5rem;
+			margin-left: .5rem;
+			margin-top: .5rem;
+			text-align: center;
+			width: 100%;
+		}
+		div:nth-child(9) {
+			max-width: 45%;
+		}
+		div:nth-child(10) {
+			max-width: 45%;
+		}
+		input {
+			background-color: lighten(@bgc, 10%);
+			border-radius: 0px;
+			border: 1px solid darken(@btnYellow, 10%);
+			color: darken(@btnYellow, 10%);
+			display: block;
+			float: left;
+			margin-left: .5rem;
+			margin-top: .5rem;
+			max-width: 45%;
+
+		}
+		input:nth-child(8) {
+			max-width: 91%;
+		}
+		input:nth-child(15),
+		input:nth-child(16),
+		input:nth-child(17), {
+			max-width: 91%;
+		}
+		button {
+			display: block;
+			float: left;
+			background-color: @btnYellow;
+			border-radius: 0px;
+			color: #000;
+			margin-top: 1rem;
+			margin-left: 20rem;
+		}
+		button:nth-child(13) {
+			margin-left: 19.5rem;
+		}
+		button:nth-child(18) {
+			margin-left: 21.5rem;
+		}
+	}
+}

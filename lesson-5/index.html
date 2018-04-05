@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Java Script</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<section class="admin-panel">
+		<div class="main container">
+			<div class="row">
+				<div class="open col-xs-12 col-md-12 col-lg-12">
+					<button class="open-btn" id="open-btn">Открыть магазин</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="main-info col-xs-12 col-md-6">
+					<div class="header">Информация про магазин</div>
+					<div class="name col-xs-12 col-md-6">Название магазина: </div>
+					<div class="name-value col-xs-12 col-md-6"></div>
+
+					<div class="budget col-xs-12 col-md-6">Бюджет магазина: </div>
+					<div class="budget-value col-xs-12 col-md-6"></div>
+
+					<div class="goods col-xs-12 col-md-6">Категории товаров: </div>
+					<div class="goods-value col-xs-12 col-md-6"></div>
+
+					<div class="items col-xs-12 col-md-6">Наименования товаров: </div>
+					<div class="items-value col-xs-12 col-md-6"></div>
+
+					<div class="employers col-xs-12 col-md-6">Сотрудники: </div>
+					<div class="employers-value col-xs-12 col-md-6"></div>
+
+					<div class="discount col-xs-12 col-md-6">Дисконтная система </div>
+					<div class="discount-value col-xs-12 col-md-6"></div>
+
+					<div class="isopen col-xs-12 col-md-6">Открыто </div>
+					<div class="isopen-value col-xs-12 col-md-6"></div>
+				</div>
+
+				<div class="main-functions form-group col-xs-12 col-md-6">
+					<div class="choose-goods clearfix">Введите категории товаров</div>
+					<input class="goods-item form-control" type="text" id="goods_1">
+					<input class="goods-item form-control" type="text" id="goods_2">
+					<input class="goods-item form-control" type="text" id="goods_3">
+					<input class="goods-item form-control" type="text" id="goods_4">
+					<button class="goods-item-btn btn">Утвердить</button>
+
+					<div class="choose-items clearfix">Введите продукты через запятую</div>
+					<input class="choose-item form-control" type="text" id="items">
+
+					<div class="time clearfix">Сколько сейчас времени?</div>
+					<div class="count-budget clearfix">Расчет дневного бюджета</div>
+					
+					<input class="time-value form-control" type="text" id="time">
+					<input class="count-budget-value form-control" type="text" id="budget">
+					<button class="count-budget-btn btn">Рассчитать</button>
+
+					<div class="hire-employers clearfix">Имена сотрудников</div>
+					<input class="hire-employers-item form-control" type="text" id="employers_1">
+					<input class="hire-employers-item form-control" type="text" id="employers_2">
+					<input class="hire-employers-item form-control" type="text" id="employers_3">
+					<button class="hire-employers-btn btn">Нанять</button>
+				</div>
+			</div>
+		</div>
+</section>
+
+
+
+<script  src="js/script.js"></script>
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
