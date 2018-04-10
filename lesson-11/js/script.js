@@ -179,16 +179,8 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 
 	// Form
 
- 	let message = new Object();
-	// message.loading = "Загрузка...";
-	// message.success = "Спасибо! Скоро мы с Вами свяжемся";
-	// message.failure = "Что-то пошло не так...";
-	// let loading = document.getElementsByClassName( 'loading_img' )[0],
-	// 	success = document.getElementsByClassName( 'success_img' )[0],
-	// 	failure = document.getElementsByClassName( 'failure_img' )[0];
-	// message.loading = loading;
-	// message.success = success;
-	// message.failure = failure;
+ 	//let message = new Object();
+
 
 	let modalWindow = document.getElementsByClassName('popup')[0],
 		form = modalWindow.getElementsByTagName('form')[0],
