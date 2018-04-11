@@ -3,8 +3,7 @@
 // Табы
 
 window.addEventListener( 'DOMContentLoaded',  function () {
-
-	let tab = document.getElementsByClassName('info-header-tab'),
+		let tab = document.getElementsByClassName('info-header-tab'),
 	tabContent = document.getElementsByClassName('info-tabcontent'),
 	info = document.getElementsByClassName('info-header')[0];
 
@@ -143,13 +142,13 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 	let more = document.querySelector('.more'),
 		moreBtns = document.querySelectorAll('.description-btn'),
 		overlay = document.querySelector('.overlay'),
-		close = document.querySelector('.popup-close');
+		close = document.querySelector('.popup-close'),
+		statusMessage = document.createElement('div');
 
 	more.addEventListener('click', function() {
 		this.classList.add('bounceInLeft');
 		overlay.style.display = 'block';
 		document.body.style.overflow = 'hidden';
-
 	});
 	moreBtns[0].addEventListener('click', function() {
 		this.classList.add('bounceInLeft');
@@ -175,6 +174,7 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 		overlay.style.display = 'none';
 		more.classList.remove('bounceInLeft');
 		document.body.style.overflow = '';
+		statusMessage.classList.add( 'hide' );
 	});
 
 	// Form
@@ -186,8 +186,7 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 		form = modalWindow.getElementsByTagName('form')[0],
 		input = form.getElementsByTagName('input'),
 		contactForm = document.getElementById('form'),
-		inputContactForm = contactForm.getElementsByTagName('input'),
-		statusMessage = document.createElement('div');
+		inputContactForm = contactForm.getElementsByTagName('input');
 	
 	statusMessage.classList.add( 'status' );
 
@@ -195,6 +194,7 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 	modalWindow.addEventListener('submit', function(event) {
 		event.preventDefault();
 		form.appendChild( statusMessage );
+		statusMessage.classList.remove( 'hide' );
 
 		// AJAX
 
@@ -210,13 +210,16 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 		request.onreadystatechange = function () {
 			if ( request.readyState < 4 ) {
 				//statusMessage.innerHTML = message.loading;
-				statusMessage.style.backgroundImage = 'url(img/ajax-loader.gif)';
+				statusMessage.style.backgroundImage = 'url(https://image.ibb.co/jzR3Rc/ajax_loader.gif)';
+				statusMessage.style.width = '550px';
 			} else if ( request.readyState === 4 ) {
 				if ( request.status == 200 && request.status < 300 ) {
-					statusMessage.style.backgroundImage = 'url(img/success.png)';
+					statusMessage.style.backgroundImage = 'url(https://image.ibb.co/jKVmex/success.png)';
+					statusMessage.style.width = '50px';
 					// Добавляем контент на страницу
 				} else {
-					statusMessage.style.backgroundImage = 'url(img/failure.png)';
+					statusMessage.style.backgroundImage = 'url(https://image.ibb.co/iH0mex/failure.png)';
+					statusMessage.style.width = '50px';
 				}
 			}
 		};
@@ -230,7 +233,7 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 	contactForm.addEventListener('submit', function(event) {
 		event.preventDefault();
 		contactForm.appendChild( statusMessage );
-		statusMessage.style.color = 'white';
+		statusMessage.style.display = 'block';
 
 		// AJAX
 
@@ -245,13 +248,16 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 
 		request.onreadystatechange = function () {
 			if ( request.readyState < 4 ) {
-				statusMessage.style.backgroundImage = 'url(img/ajax-loader.gif)';
+				statusMessage.style.backgroundImage = 'url(https://image.ibb.co/jzR3Rc/ajax_loader.gif)';
+				statusMessage.style.width = '550px';
 			} else if ( request.readyState === 4 ) {
 				if ( request.status == 200 && request.status < 300 ) {
-					statusMessage.style.backgroundImage = 'url(img/success.png)';
+					statusMessage.style.backgroundImage = 'url(https://image.ibb.co/jKVmex/success.png)';
+					statusMessage.style.width = '50px';
 					// Добавляем контент на страницу
 				} else {
-					statusMessage.style.backgroundImage = 'url(img/failure.png)';
+					statusMessage.style.backgroundImage = 'url(https://image.ibb.co/iH0mex/failure.png)';
+					statusMessage.style.width = '50px';
 				}
 			}
 		};
@@ -260,6 +266,4 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 			// Очищаем поля ввода
 		}
 	});
-
-  
 });
