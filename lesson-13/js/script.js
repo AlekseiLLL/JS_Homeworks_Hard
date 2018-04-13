@@ -332,21 +332,25 @@ window.addEventListener( 'DOMContentLoaded',  function () {
 	let peopleField = document.getElementsByClassName( 'counter-block-input' )[0],
 		dayField = document.getElementsByClassName( 'counter-block-input' )[1],
 		base =  document.getElementById( 'select' ),
-		total = document.getElementById( 'total' );
-		
+		total = document.getElementById( 'total' );		
 		total.innerHTML = 0;
 
 	function calculateTotal ( persons, days, base ) {
-		if ( peopleField.value > 1 || dayField.value > 1 ) {
-			if ( base == 1 ) {
-				total.innerHTML =  parseInt((( peopleField.value * dayField.value ) * 1 ) * 3000 );
-				total.classList.toggle('bounceInRight');
-			} else if ( base == 1.5 ) {
-				total.innerHTML = parseInt((( peopleField.value * dayField.value ) * 1.5 ) * 3000 );
-				total.classList.toggle('bounceInRight');
-			} else if ( base == 1.8 ) {
-				total.innerHTML = parseInt((( peopleField.value * dayField.value ) * 1.8 ) * 3000 );
-				total.classList.toggle('bounceInRight');
+		if ( peopleField.value > 0 && dayField.value > 1 ) {
+			console.log(typeof(peopleField.value, dayField.value));
+			if ( peopleField.value.charAt(0) == 0 || dayField.value.charAt(0) == 0 ) {
+				total.innerHTML = 0;
+			} else {
+				if ( base == 1 ) {
+					total.innerHTML = Number((( peopleField.value * dayField.value ) * 1 ) * 3000 );
+					total.classList.toggle('bounceInRight');
+				} else if ( base == 1.5 ) {
+					total.innerHTML = Number((( peopleField.value * dayField.value ) * 1.5 ) * 3000 );
+					total.classList.toggle('bounceInRight');
+				} else if ( base == 1.8 ) {
+					total.innerHTML = Number((( peopleField.value * dayField.value ) * 1.8 ) * 3000 );
+					total.classList.toggle('bounceInRight');
+				}
 			}
 		} else {
 			total.innerHTML = 0;
